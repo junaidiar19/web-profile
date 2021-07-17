@@ -161,7 +161,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="<?php echo base_url('admin/jadwal') ?>" class="nav-link <?= ($active == 'jadwal') ? 'active' : '' ?>">
               <i class="nav-icon fas fa-book"></i>
-              <p>Jadwal Pembelajaran</p>
+              <p>Jadwal Pelajaran</p>
             </a>
           </li>
           

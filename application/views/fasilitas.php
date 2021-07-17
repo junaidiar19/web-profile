@@ -39,7 +39,7 @@
                         <tr>
                               <td><?=$x+1?></td>
                               <td><?=$d->name?></td>
-                              <td><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"><img src="<?= base_url($d->image) ?>" height="50px" weight="50px"></a></td>
+                              <td><button data-toggle="modal" data-target="#detail_<?=$d->id?>"><img src="<?= base_url($d->image) ?>"  height="100px" weight="100px"></button></td>
                               <td><?=$d->jmh?></td>
                             
                         </tr>
@@ -50,3 +50,24 @@
         </div>
     </div>
   </div>
+
+<?php foreach ($fasilitas->result() as $x => $d): ?>
+<div class="modal fade" id="detail_<?=$d->id?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Detail Gambar</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <center><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"> <img src="<?= base_url($d->image) ?>"  height="350px" weight="350px"></a>
+              </center><br><p>Nama: <?=$d->name?><br>Jumlah: <?=$d->jmh?></p><br>
+          
+          </div>
+          </div>
+        </div>
+    </div>
+</div>
+<?php endforeach ?>

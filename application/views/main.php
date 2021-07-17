@@ -74,13 +74,13 @@
     <div class="fh5co-loader"></div>
     
     <div id="page">
-    <nav class="fh5co-nav" role="navigation">
+    <nav class="fh5co-nav" role="navigation" >
         <div class="top-menu">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-2">
 
-                        <div id="fh5co-logo"><center><a href="home"><img src="<?=base_url('assets/logo1.PNG')?>" class="mb-2" style="height: 50px;" alt=""></a></center></div>
+                        <div id="fh5co-logo"><center><a href="home"><img src="<?=base_url('assets/logo.PNG')?>" class="mb-2" style="height: 70px;" alt=""></a></center></div>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul> 
@@ -117,7 +117,7 @@
     
 <?php $this->load->view($content); ?>
 
-    <footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
+    <footer id="fh5co-footer" role="contentinfo" style="background-color: #0F044C">
         <div class="overlay"></div>
         <div class="container">
             <div class="row row-pb-md">
