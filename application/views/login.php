@@ -9,8 +9,10 @@
       <div class="row justify-content-center mt-5">
         <div class="col-md-4">
           <div class="card">
-            <div class="card-header bg-white text-center">              
-              <img src="<?=base_url('assets/logo.png')?>" class="mb-2" style="height: 100px;" alt="">
+            <div class="card-header bg-white text-center">         
+              <a href="<?= base_url('home') ?>">  
+                <img src="<?=base_url('assets/logo.png')?>" class="mb-2" style="height: 100px;" alt="">
+              </a>
               <h4>LOGIN</h4>
               <h6>SMPN 24 Banjarmasin</h6>
             </div>

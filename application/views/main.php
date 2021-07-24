@@ -78,12 +78,18 @@
     <div id="page">
     <nav class="fh5co-nav" role="navigation" >
         <div class="top-menu">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-2">
-
-                        <div id="fh5co-logo"><center><a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="mb-2" style="height: 50px;" alt=""></a></center></div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <center>
+                                    <a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="img-fluid" style="height: 50px;" alt=""></a>
+                                </center>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="col-md-10" style="padding-top: 7px;">
                         <ul> 
                             <li class="<?php echo $content=='home'? 'active' : ''?>"><a href="<?php echo base_url('home') ?>">HOME</a></li>
                             <li class="has-dropdown <?php echo $content=='profil'? 'active' : ''?>">
@@ -108,6 +114,7 @@
                             <li class="<?php echo $content=='kontak'? 'active' : ''?>"><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
                             <li class="<?php echo $content=='kritik-saran'? 'active' : ''?>"><a href="<?php echo base_url('kritik') ?>">KRITIK & SARAN</a></li>
                         </ul>
+                    </div>
                 </div>
                 
             </div>

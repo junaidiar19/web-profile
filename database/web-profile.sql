@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2021 pada 18.39
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 8.0.7
+-- Generation Time: Jul 24, 2021 at 03:27 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web-profil`
+-- Database: `web-profile`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ekstrakulikuler`
+-- Table structure for table `ekstrakulikuler`
 --
 
 CREATE TABLE `ekstrakulikuler` (
@@ -37,7 +37,7 @@ CREATE TABLE `ekstrakulikuler` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ekstrakulikuler`
+-- Dumping data for table `ekstrakulikuler`
 --
 
 INSERT INTO `ekstrakulikuler` (`id`, `name`, `image`, `pembina`, `hari`, `jam`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `ekstrakulikuler` (`id`, `name`, `image`, `pembina`, `hari`, `jam`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `fasilitas`
+-- Table structure for table `fasilitas`
 --
 
 CREATE TABLE `fasilitas` (
@@ -62,7 +62,7 @@ CREATE TABLE `fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `fasilitas`
+-- Dumping data for table `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`id`, `name`, `image`, `jmh`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `fasilitas` (`id`, `name`, `image`, `jmh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galeri`
+-- Table structure for table `galeri`
 --
 
 CREATE TABLE `galeri` (
@@ -82,7 +82,7 @@ CREATE TABLE `galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `galeri`
+-- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `image`, `caption`, `id_komentar`) VALUES
@@ -92,7 +92,7 @@ INSERT INTO `galeri` (`id`, `image`, `caption`, `id_komentar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jadwal`
+-- Table structure for table `jadwal`
 --
 
 CREATE TABLE `jadwal` (
@@ -105,7 +105,7 @@ CREATE TABLE `jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jadwal`
+-- Dumping data for table `jadwal`
 --
 
 INSERT INTO `jadwal` (`id`, `wali`, `kelas`, `semester`, `tahun_ajaran`, `image`) VALUES
@@ -115,7 +115,7 @@ INSERT INTO `jadwal` (`id`, `wali`, `kelas`, `semester`, `tahun_ajaran`, `image`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kegiatan`
+-- Table structure for table `kegiatan`
 --
 
 CREATE TABLE `kegiatan` (
@@ -128,7 +128,7 @@ CREATE TABLE `kegiatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kegiatan`
+-- Dumping data for table `kegiatan`
 --
 
 INSERT INTO `kegiatan` (`id`, `judul`, `gambar`, `isi`, `id_komentar`, `status`) VALUES
@@ -142,7 +142,7 @@ INSERT INTO `kegiatan` (`id`, `judul`, `gambar`, `isi`, `id_komentar`, `status`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `komentar`
+-- Table structure for table `komentar`
 --
 
 CREATE TABLE `komentar` (
@@ -155,7 +155,7 @@ CREATE TABLE `komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `komentar`
+-- Dumping data for table `komentar`
 --
 
 INSERT INTO `komentar` (`id`, `id_user`, `id_kegiatan`, `id_galeri`, `isi_komen`, `status_komen`) VALUES
@@ -166,7 +166,7 @@ INSERT INTO `komentar` (`id`, `id_user`, `id_kegiatan`, `id_galeri`, `isi_komen`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kriitik`
+-- Table structure for table `kriitik`
 --
 
 CREATE TABLE `kriitik` (
@@ -177,7 +177,7 @@ CREATE TABLE `kriitik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kriitik`
+-- Dumping data for table `kriitik`
 --
 
 INSERT INTO `kriitik` (`id`, `id_user`, `kritik`, `saran`) VALUES
@@ -187,7 +187,7 @@ INSERT INTO `kriitik` (`id`, `id_user`, `kritik`, `saran`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pegawai`
+-- Table structure for table `pegawai`
 --
 
 CREATE TABLE `pegawai` (
@@ -206,7 +206,7 @@ CREATE TABLE `pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pegawai`
+-- Dumping data for table `pegawai`
 --
 
 INSERT INTO `pegawai` (`id`, `nip`, `name`, `image`, `pendidikan`, `jabatan`, `tempat_lahir`, `tgl_lahir`, `j_kelamin`, `telp`, `email`, `status`) VALUES
@@ -215,7 +215,7 @@ INSERT INTO `pegawai` (`id`, `nip`, `name`, `image`, `pendidikan`, `jabatan`, `t
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `prestasi`
+-- Table structure for table `prestasi`
 --
 
 CREATE TABLE `prestasi` (
@@ -228,7 +228,7 @@ CREATE TABLE `prestasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `prestasi`
+-- Dumping data for table `prestasi`
 --
 
 INSERT INTO `prestasi` (`id`, `name_lomba`, `name_peserta`, `prestasi`, `tingkat`, `image`) VALUES
@@ -240,7 +240,7 @@ INSERT INTO `prestasi` (`id`, `name_lomba`, `name_peserta`, `prestasi`, `tingkat
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -255,138 +255,138 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nip`, `email`, `username`, `password`, `image`, `level`) VALUES
 (1, 'Ika', 6112001, 'ika@gmail.com', 'admin', 'admin', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_29.jpeg', 1),
 (2, 'Irfan Arisandi', 0, 'Teknik Informatika', 'irfan', '$2y$12$6Esi83o3EiU/mj3VWFJKEe0eeROkF8N73bjyppTkFhLZPlTGA76aG', '', 2),
-(3, 'Ali', 7112000, 'ali@gmail.com', 'admin2', '$2a$08$TW6D20T4vrYm/5oUDNKH..LDXbWkaeKYFFsi6eRdzQ7X1lYReBlry', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_11.jpeg', 1);
+(3, 'Ali', 7112000, 'ali@gmail.com', 'admin2', '$2a$08$fz3rCgzgOsDx4TxnYd5XGupJngp5XdYbi5QSwf0vCFePplmGqFYtS', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_11.jpeg', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `ekstrakulikuler`
+-- Indexes for table `ekstrakulikuler`
 --
 ALTER TABLE `ekstrakulikuler`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `fasilitas`
+-- Indexes for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `galeri`
+-- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jadwal`
+-- Indexes for table `jadwal`
 --
 ALTER TABLE `jadwal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kegiatan`
+-- Indexes for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `komentar`
+-- Indexes for table `komentar`
 --
 ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kriitik`
+-- Indexes for table `kriitik`
 --
 ALTER TABLE `kriitik`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pegawai`
+-- Indexes for table `pegawai`
 --
 ALTER TABLE `pegawai`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `prestasi`
+-- Indexes for table `prestasi`
 --
 ALTER TABLE `prestasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `ekstrakulikuler`
+-- AUTO_INCREMENT for table `ekstrakulikuler`
 --
 ALTER TABLE `ekstrakulikuler`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `fasilitas`
+-- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `galeri`
+-- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `jadwal`
+-- AUTO_INCREMENT for table `jadwal`
 --
 ALTER TABLE `jadwal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `kegiatan`
+-- AUTO_INCREMENT for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `komentar`
+-- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `kriitik`
+-- AUTO_INCREMENT for table `kriitik`
 --
 ALTER TABLE `kriitik`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `pegawai`
+-- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `prestasi`
+-- AUTO_INCREMENT for table `prestasi`
 --
 ALTER TABLE `prestasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
