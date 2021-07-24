@@ -33,7 +33,7 @@
                           <th>No</th>
                           <th>Id Pengunjung</th>
                           <th>Isi Komentar</th>
-                          <th>Judul Kegiatan</th>
+                          <th width="200px">Judul Kegiatan</th>
                           <th>Status</th>
                           <th>Aksi</th>                                     
                         </tr>
@@ -47,8 +47,8 @@
                               <td><?=$d->judul?></td>
                               <td><?=$d->status_komen?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash" onclick="delete_komentar(<?=$d->id?>)"></i></button>
-                                <button class="btn btn-primary btn-sm"><i class="fas fa-eye" data-toggle="modal" data-target="#verif_<?=$d->id?>"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id_komen?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#verif_<?=$d->id_komen?>"><i class="fas fa-eye"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>
@@ -88,8 +88,8 @@
                               <td><?=$d->caption?></td>
                               <td><?=$d->status_komen?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash" onclick="delete_komentar(<?=$d->id?>)"></i></button>
-                                <button class="btn btn-primary btn-sm"><i class="fas fa-eye" data-toggle="modal" data-target="#verif_<?=$d->id?>"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id_komen?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#verifwe_<?=$d->id_komen?>"><i class="fas fa-eye"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>
@@ -101,7 +101,7 @@
 </div>
 
 <?php foreach($komentar as $x => $d): ?>
-<div class="modal fade" id="verif_<?=$d->id?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<div class="modal fade" id="verif_<?=$d->id_komen?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -110,20 +110,39 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('admin/komen_verif/' . $d->id) ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url('admin/komen_verif/' . $d->id_komen) ?>" method="post">
             <div class="modal-body">
-            <div class="form-group">
-                    <label>Id User</label>
-                    <select class="form-control mr-2" name="id_user">
-                    <option value="<?=$d->id_user?>"><?=$d->id_user?></option>
-                </select>
-                </div>
                 <div class="form-group">
-                    <label>Isi Komen</label>
-                    <select class="form-control mr-2" name="isi">
-                    <option value="<?=$d->isi_komen?>"><?=$d->isi_komen?></option>
+                    <label>Aktifkan Komentar</label>
+                    <select class="form-control mr-2" name="status">
+                    <option value="">-Pilih_</option>
+                    <option value="Aktif">Aktifkan</option>
+                    <option value="Hide">Sembuyikan</option>
                 </select>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php endforeach ?>
+
+<?php foreach($komen as $x => $d): ?>
+<div class="modal fade" id="verifwe_<?=$d->id_komen?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Verifikasi Komentar</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?php echo base_url('admin/komen_verif/' . $d->id_komen) ?>" method="post"s>
+            <div class="modal-body">
                 <div class="form-group">
                     <label>Aktifkan Komentar</label>
                     <select class="form-control mr-2" name="status">
@@ -153,9 +172,7 @@ function delete_komentar(id) {
             url : '<?=base_url('admin/delete_komentar')?>',
             data : {id:id},
             success: function(res) {
-                if(res == 1) {
                     location.reload();
-                }
             }, error: function(err) {
                 console.log(err);
             }

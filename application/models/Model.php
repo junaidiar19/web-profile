@@ -10,8 +10,17 @@ class Model extends CI_Model{
     	return $this->db->where('id', $id)->update($table, $data);
     }
 
+    function update_komen($table, $data, $id) {
+        return $this->db->where('id_komen', $id)->update($table, $data);
+    }
+
     function delete($table, $id) {
     	return $this->db->where('id', $id)->delete($table);
+    }
+
+
+    function delete_komen($table, $id) {
+        return $this->db->where('id_komen', $id)->delete($table);
     }
 
 	function get_where($table, $id) {
@@ -23,10 +32,15 @@ class Model extends CI_Model{
         return $this->db->get('kegiatan');
     }
 
+
+    function komentar_komen($id) {
+        return $this->db->query("SELECT * FROM komentar WHERE id_galeri = '".$id."' AND status_komen='Aktif' ");
+    }
+
     function kegiatanduatabel() {
         $this->db->select('*');
         $this->db->from('kegiatan');
-        $this->db->join('komentar','komentar.id=kegiatan.id');
+        $this->db->join('komentar','komentar.id_komen=kegiatan.id');
         $query = $this->db->get();
         return $query->result();
     }
@@ -72,7 +86,7 @@ class Model extends CI_Model{
         $this->db->select('*');
         $this->db->from('komentar');
         $this->db->join('kegiatan','kegiatan.id=komentar.id_kegiatan');
-        $this->db->order_by('komentar.id desc');
+        $this->db->order_by('komentar.id_komen desc');
         $query = $this->db->get();
         return $query->result();
     }
@@ -81,7 +95,7 @@ class Model extends CI_Model{
         $this->db->select('*');
         $this->db->from('komentar');
         $this->db->join('galeri','galeri.id=komentar.id_galeri');
-        $this->db->order_by('komentar.id desc');
+        $this->db->order_by('komentar.id_komen desc');
         $query = $this->db->get();
         return $query->result();
     }

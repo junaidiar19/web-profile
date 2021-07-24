@@ -164,7 +164,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">EKSTRAKULIKULER<br><?=$ekstra->num_rows()?></p>
+                                        <h5><p class="card-category" style="font-size: 18px">EKSTRAKULIKULER<br><?=$ekstra->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>

@@ -1,14 +1,14 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp_24.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1 class="heading-section">Ekstrakulikuler</h1>
-									<h2>Halaman Ekstrakulikuler Berisi tentang informasi Kegiatan pengembangan siswa dalam bidang olahraga.</h2>
+									<h2>Halaman Ekstrakulikuler Berisi tentang informasi Kegiatan pengembangan siswa dalam bidang nonakademik.</h2>
 			   				</div>
 			   			</div>
 			   		</div>

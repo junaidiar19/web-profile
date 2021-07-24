@@ -22,8 +22,6 @@ class Galeri extends CI_Controller {
 	{
 		$this->data['content'] = "galeri";
         $this->data['galeri'] = $this->db->query("SELECT * FROM galeri order by id desc");
-        $this->data['komen'] = $this->db->query("SELECT * FROM komentar WHERE id_galeri = '2' AND status_komen='Aktif' ");
-
 
 		$this->load->view('main', $this->data);
 	}
@@ -38,5 +36,15 @@ class Galeri extends CI_Controller {
 
         $this->db->insert('komentar', $attr);
         redirect($_SERVER['HTTP_REFERER']);
+	}
+
+	public function detail($id)
+	{
+		$this->data['content'] = "content_galeri";
+        $this->data['galeri'] = $this->db->query("SELECT * FROM galeri WHERE id ='".$id."'");
+        $this->data['komen'] = $this->db->query("SELECT * FROM komentar WHERE id_galeri = '".$id."' AND status_komen='Aktif' ");
+
+
+		$this->load->view('main', $this->data);
 	}
 }

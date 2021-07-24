@@ -8,7 +8,7 @@
             <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="admin">Dashboard</a></li>
-                <li class="breadcrumb-item active">Ekschool</li>
+                <li class="breadcrumb-item active">Ekstrakulikuler</li>
             </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -54,8 +54,8 @@
                               <td><?=$d->hari?></td>
                               <td><?=$d->jam?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-times" onclick="delete_ekstra(<?=$d->id?>)"></i></button>
-                                <button class="btn btn-success btn-sm"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#edit_<?=$d->id?>"></i></button>
+                                <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times" onclick="delete_ekstra(<?=$d->id?>)"></i></button>
+                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#edit_<?=$d->id?>"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>

@@ -36,6 +36,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="<?=base_url('assets/logo.png')?>">
     
     <link rel="stylesheet" href="<?php echo base_url('assets/') ?>plugins/fontawesome-free/css/all.min.css">
     <!-- Animate.css -->
@@ -80,9 +82,8 @@
                 <div class="row">
                     <div class="col-xs-2">
 
-                        <div id="fh5co-logo"><center><a href="home"><img src="<?=base_url('assets/logo.PNG')?>" class="mb-2" style="height: 70px;" alt=""></a></center></div>
+                        <div id="fh5co-logo"><center><a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="mb-2" style="height: 50px;" alt=""></a></center></div>
                     </div>
-                    <div class="col-xs-10 text-right menu-1">
                         <ul> 
                             <li class="<?php echo $content=='home'? 'active' : ''?>"><a href="<?php echo base_url('home') ?>">HOME</a></li>
                             <li class="has-dropdown <?php echo $content=='profil'? 'active' : ''?>">
@@ -106,9 +107,7 @@
                             <li class="<?php echo $content=='galeri'? 'active' : ''?>"><a href="<?php echo base_url('galeri') ?>">GALERI</a></li>
                             <li class="<?php echo $content=='kontak'? 'active' : ''?>"><a href="<?php echo base_url('kontak') ?>">KONTAK</a></li>
                             <li class="<?php echo $content=='kritik-saran'? 'active' : ''?>"><a href="<?php echo base_url('kritik') ?>">KRITIK & SARAN</a></li>
-                            <li class="btn btn-cta"><a href="<?php echo base_url('login') ?>"><span>LOGIN</span></a></li>
                         </ul>
-                    </div>
                 </div>
                 
             </div>
@@ -149,10 +148,7 @@
                 <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
                     <h3>Kunjungi Kami</h3>
                     <ul class="fh5co-footer-links">
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Website</a></li>
                     </ul>
                 </div>
             </div>

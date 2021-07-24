@@ -549,7 +549,7 @@ class Admin extends CI_Controller {
         $path = 'assets/images/pegawai';
         $config['upload_path']         = $path;
         $config['allowed_types']        = 'jpeg|jpg|png';
-        $config['max_size']             = 2048;
+        $config['max_size']             = 6144;
 
         $this->load->library('upload', $config);
 
@@ -599,7 +599,7 @@ class Admin extends CI_Controller {
         $path = 'assets/images/pegawai';
         $config['upload_path']         = $path;
         $config['allowed_types']        = 'jpeg|jpg|png';
-        $config['max_size']             = 2048;
+        $config['max_size']             = 6144;
 
         $this->load->library('upload', $config);
 
@@ -860,8 +860,10 @@ class Admin extends CI_Controller {
      public function delete_kritik()
     {
         $this->model->delete('kriitik', $this->input->post('id'));
+        //$this->model->delete($id);
         $this->session->set_flashdata('success', 'Berhasil Menghapus Data');
         echo 1;
+        //redirect('admin/komentar');
     }
 
      public function komentar() 
@@ -876,22 +878,20 @@ class Admin extends CI_Controller {
 
       public function delete_komentar()
     {
-        $this->model->delete('komentar', $this->input->post('id'));
+        $this->model->delete_komen('komentar', $this->input->post('id'));
         $this->session->set_flashdata('success', 'Berhasil Menghapus Data');
         echo 1;
     }
 
-    public function komen_verif(){
-        $d = $this->db->get_where('komentar', ['id' => $id])->row();
+    public function komen_verif($id){
+        $d = $this->db->get_where('komentar', ['id_komen' => $id])->row();
 
             $attr = [
-            'id_user' => $this->input->post('id_user'),
-            'isi_komen' => $this->input->post('isi'),
             'status_komen' => $this->input->post('status'),
             ];
                  
 
-        $this->db->update('komentar', $attr);
+        $this->model->update_komen('komentar', $attr,$id);
         redirect($_SERVER['HTTP_REFERER']);
     }
 

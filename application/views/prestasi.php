@@ -1,14 +1,14 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp_24.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1 class="heading-section">Prestasi &amp; Sekolah</h1>
-									<h2>Halaman Prestasi Berisi Tentang Info Prestasi dan Capaian Dari Siswa maupun Sekolah SMPN 24 Banjarmasi</a></h2>
+									<h2>Halaman Prestasi Berisi Tentang Info Prestasi dan Pencapaian Dari Siswa maupun Sekolah SMPN 24 Banjarmasin</a></h2>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -22,8 +22,8 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Perstasi Siswa &amp; Sekolah</h2>
-					<p>Informasi Terkait Capaian</p>
+					<h2>Prestasi Siswa &amp; Sekolah</h2>
+					<p>Informasi Terkait Pencapaian Sekolah dan Siswa</p>
 				</div>
 			</div>
 			<div class="row row-padded-mb">

@@ -1,7 +1,7 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp_24.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -9,7 +9,7 @@
 			   				<div class="slider-text-inner">
 			   					<h1 class="heading-section">Hubungi Kami</h1>
 									<div>
-									<h2><i class="fas fa-phone"></i> (0511) 3303164 </h2>
+									
 									<h2><i class="fas fa-envelope-square"></i> smpn24banjarmasin@gmail.com</h2>
 									<h2><i class="fas fa-globe"></i> www.smp24bjm.com</h2>
 									<h2><i class="fas fa-map-marker-alt"></i> Jalan Sultan Adam Komplek Madani No. 05 RT. 31, Kelurahan Surgi Mufti, Kecamatan Banjarmasin Utara, Kota Banjarmasin, Provinsi Kalimantan Selatan</h2>

@@ -35,15 +35,12 @@
                         <tr>
                           <th>No</th>
                           <th>Nama</th>
-                          <th>Nip</th>
+                          <th width="150px">NIP</th>
                           <th>Pendidikan</th>
-                          <th>Jabatan</th>
+                          <th>Jabatan Sekolah</th>
                           <th>TTL</th>
-                          <th>Jenis Kelamin</th>
-                          <th>Telp</th>
-                          <th>Email</th>
                           <th>Status</th>
-                          <th>Aksi</th>                                     
+                          <th width="50px">Aksi</th>                                     
                         </tr>
                     </thead>
                     <tbody>
@@ -55,9 +52,6 @@
                               <td><?=$d->pendidikan?></td>
                               <td><?=$d->jabatan?></td>
                               <td><?=$d->tempat_lahir?>, <?=$d->tgl_lahir?></td>
-                              <td><?=$d->j_kelamin?></td>
-                              <td><?=$d->telp?></td>
-                              <td><?=$d->email?></td>
                               <td><?=$d->status?></td>
                             <td>
                                 <button class="btn btn-danger btn-sm"><i class="fas fa-times" onclick="delete_staff(<?=$d->id?>)"></i></button>

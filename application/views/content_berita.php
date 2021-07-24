@@ -6,7 +6,7 @@
 					<?php foreach ($beri->result() as $x => $d): ?>					
 					<span><a data-fancybox="gallery" href="<?= base_url($d->gambar) ?>"><img src="<?= base_url($d->gambar) ?>" height="200px" weight="200px"></a></span>
 					<h2><?= $d->judul ?></h2>
-					<p><?= $d->isi ?></p>
+					<p class="text-justify"><?= $d->isi ?></p>
 			  <?php endforeach ?>
 
 				</div>

@@ -1,7 +1,7 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp_24.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -44,6 +44,8 @@
             <div class="container">
                 <center><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"> <img src="<?= base_url($d->image) ?>"  height="200px" weight="200px"></a>
             	</center><p><?= ($d->caption) ?></p><br>
+
+            	<a href="<?php echo base_url('Galeri/detail/'.$d->id); ?>">Lihat Komentar</a>
             	
             <br><br>
 					<h3>Sampaikan Komentar Anda</h3>

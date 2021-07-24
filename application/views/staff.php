@@ -1,7 +1,7 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -31,9 +31,9 @@
                         <tr>
                           <th>No</th>
                           <th>Nama</th>
-                          <th>Nip</th>
+                          <th width="200px">NIP</th>
                           <th>Pendidikan</th>
-                          <th>Jabatan</th>
+                          <th>Jabatan Sekolah</th>
                           <th>Status</th>                              
                         </tr>
                     </thead>

@@ -1,7 +1,7 @@
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(assets/images/smp_24.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="row">
@@ -57,12 +57,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Detail Gambar</h2>
+                                <center><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"> <img src="<?= base_url($d->image) ?>"  height="250px" weight="100px"></a>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="container">
-                <center><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"> <img src="<?= base_url($d->image) ?>"  height="350px" weight="350px"></a>
               </center><br><p>Nama: <?=$d->name?><br>Jumlah: <?=$d->jmh?></p><br>
           
           </div>

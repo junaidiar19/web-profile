@@ -36,9 +36,9 @@
                           <th>No</th>
                           <th>Judul</th>
                           <th>Image</th>
-                          <th>Isi</th>
+                          <th width="300px">Isi</th>
                           <th>Status</th>
-                          <th>Aksi</th>                                     
+                          <th width="50px">Aksi</th>                                     
                         </tr>
                     </thead>
                     <tbody>

@@ -6,20 +6,20 @@
     <aside id="fh5co-hero">
         <div class="flexslider">
             <ul class="slides">                
-            <li style="background-image: url(images/img_bg_1.jpg);">
+            <li style="background-image: url(assets/images/smp.jpg);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center slider-text">
                             <div class="slider-text-inner">
                                 <h1>Selamat Datang di</h1>
-                                    <h2>Website  <a href="home" target="_blank">SMPN 24 Banjarmasin</a> Silahkan Jelajahi dan Cari Informasi Lengkap Terkait Sekolah Kami</h2>
+                                    <h2>Website SMPN 24 Banjarmasin Silahkan Jelajahi dan Cari Informasi Lengkap Terkait Sekolah Kami</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(images/img_bg_2.jpg);">
+            <li style="background-image: url(assets/images/smp-1.jpg);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
