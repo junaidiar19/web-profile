@@ -6,7 +6,7 @@
     <aside id="fh5co-hero">
         <div class="flexslider">
             <ul class="slides">                
-            <li style="background-image: url(assets/images/smp.jpg);">
+            <li style="background-image: url(assets/images/smp.JPG);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(assets/images/smp-1.jpg);">
+            <li style="background-image: url(assets/images/smp-1.JPG);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
@@ -60,7 +60,7 @@
     </div>
 
 
-    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/project-7.jpg);" data-stellar-background-ratio="0.5">
+    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/project-7.JPG);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
