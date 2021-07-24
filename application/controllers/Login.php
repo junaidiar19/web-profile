@@ -1,4 +1,9 @@
 <?php
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
+
+ob_start();
 class Login extends CI_Controller {
 
     public function index() 
@@ -41,7 +46,7 @@ class Login extends CI_Controller {
         $this->load->view('login_google');
     }
 
-    public function login()
+    public function login_()
  {
   include_once APPPATH . "libraries/vendor/autoload.php";
 
