@@ -58,7 +58,7 @@ switch ($_SERVER['HTTP_HOST']) {
 	case 'localhost':
 		$env = 'development';
 		break;
-	case 'www.zulaika.polhas.xyz':
+	case 'https://zulaika.polhas.xyz/':
 		$env = 'production';
 		break;
 	default:
