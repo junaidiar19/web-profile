@@ -82,20 +82,24 @@
     </style>
     </head>
     <body>
-        
-    <div class="fh5co-loader"></div>
     
     <div id="page">
     <nav class="fh5co-nav" role="navigation" >
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-right">
+                        <p class="site">www.smp24bjm.com</p>
+                        <p class="num">Call: (0511) 3303164</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="top-menu">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-2">
-                        <div id="fh5co-logo"> 
-                                <center>
-                                    <a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="img-fluid" style="height: 50px;" alt=""></a>
-                                </center>
-                            </div>
+                        <div id="fh5co-logo"> <a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="img-fluid" style="height: 50px;" alt=""></a></div>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul> 
@@ -130,7 +134,7 @@
         </div>
     </nav>
     
-<?php $this->load->view($content); ?>
+    <?php $this->load->view($content); ?>
 
     <footer id="fh5co-footer" role="contentinfo" style="background-color: #0F044C">
         <div class="overlay"></div>
@@ -160,7 +164,6 @@
                         <li><a href="kritik">Kritik Saran</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
                     <h3>Kunjungi Kami</h3>
                     <ul class="fh5co-footer-links">
@@ -172,7 +175,7 @@
             <div class="row copyright">
                 <div class="col-md-12 text-center">
                     <p>
-                        <small class="block">Copyright &copy; 2021 <a href="#">SMPN 24 BANJARMASIN</a>.</strong> All rights reserved.</small> 
+                        <small class="block">Copyright &copy; 2021 <a href="#">SMPN 24 BANJARMASIN</a>. All rights reserved.</small> 
                         <small class="block">CREATE by <a href="$" target="_blank">Siti Zulaika</a></small>
                     </p>
                 </div>
