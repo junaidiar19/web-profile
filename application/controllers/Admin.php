@@ -87,11 +87,6 @@ class Admin extends CI_Controller {
     public function update_user($id)
     {
        $d = $this->db->get_where('users', ['id' => $id])->row();
-      
-        $password = $this->input->post('password');
-        if($password != '') {
-            $attr['password'] = $this->bcrypt->hash_password($password);
-        }
 
         if(!empty($_FILES["image"]["name"])) {
            // Koding Upload Foto
@@ -103,34 +98,39 @@ class Admin extends CI_Controller {
 
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('image'))
-        {
-            $error = 'Gambar yang anda masukan salah. Periksa lagi ekstensi foto';
-            $this->session->set_flashdata('danger', $error);
-            redirect($_SERVER['HTTP_REFERER']);
-        }
-        {
-            $data = array('upload_data' => $this->upload->data());
-        }
-   
-        // Akhir koding upload foto
+        if (!$this->upload->do_upload('image'))
+            {
+                $error = 'Gambar yang anda masukan salah. Periksa lagi ekstensi foto';
+                $this->session->set_flashdata('danger', $error);
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+            {
+                $data = array('upload_data' => $this->upload->data());
+            }
 
-           $filename = $path . '/' . $data['upload_data']['file_name'];
+            $filename = $path . '/' . $data['upload_data']['file_name'];
+
+            //Koding hapus gambar lama
+            file_exists($lok=FCPATH.'/'. $d->image);
+            unlink($lok);
+        }
+    
+        // Akhir koding upload foto
 
         $attr = [
             'name' => $this->input->post('name'),
             'nip' => $this->input->post('nip'),
             'email' => $this->input->post('email'),
             'username' => $this->input->post('username'),
-            'password' => $password,
-            'image' => $filename,
-            'level' => $this->input->post('level'),
+            'image' => $filename ?? $d->image,
         ];
 
-            //Koding hapus gambar lama
-            file_exists($lok=FCPATH.'/'. $d->image);
-            unlink($lok);
+        $password = $this->input->post('password');
+        if($password != '') {
+            $attr['password'] = $this->bcrypt->hash_password($password);
         }
+
+        
         
         $this->model->update('users', $attr, $id);
         $this->session->set_flashdata('success', 'Berhasil Mengedit Data');

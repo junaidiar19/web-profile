@@ -16,9 +16,7 @@
 </div>
 <!-- /.content-header -->
 <div class="container">
-   <!--<?php if($this->session->flashdata('success')){ echo alert();}?>-->
-
-   <?php if($this->session->flashdata('success')){ echo 'Data Berhasil Di Update';}?>
+    <?= alert(); ?>
     <div class="card">
         <div class="card-header bg-white">
             <div class="row">
