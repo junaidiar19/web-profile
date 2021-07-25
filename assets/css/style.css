@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.7;
-  color: #828282;
+  color: #000000;
   background: #fff;
 }
 
@@ -56,6 +56,11 @@ a:hover, a:active, a:focus {
   color: #2D6CDF;
   outline: none;
   text-decoration: none;
+}
+
+.small, small {
+  font-size: 70%;
+  font-weight: 700px;
 }
 
 p {

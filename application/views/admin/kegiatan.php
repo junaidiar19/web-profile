@@ -38,7 +38,7 @@
                           <th>Image</th>
                           <th width="300px">Isi</th>
                           <th>Status</th>
-                          <th width="50px">Aksi</th>                                     
+                          <th width="60px">Aksi</th>                                     
                         </tr>
                     </thead>
                     <tbody>

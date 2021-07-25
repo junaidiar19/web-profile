@@ -4,7 +4,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Jadwal Mata Pelajaran</h2>
-					<p>Jadwal Mata Pelajaran SMPN 24 Banjarmasin Tahun Akademik 2020/2021</p>
+					<p>Jadwal Mata Pelajaran di SMPN 24 Banjarmasin</p>
 				</div>
 			</div>
 			<div class="row row-padded-mb">

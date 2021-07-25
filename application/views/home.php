@@ -41,7 +41,7 @@
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
                     <h2>Berita Terbaru</h2>
-                    <p>Berisi tentang informasi kegiatan sekolah atau informasi lainya terkait SMPN 24 Banjarmasin.</p>
+                    <p>Berisi tentang informasi kegiatan sekolah atau informasi lainnya terkait SMPN 24 Banjarmasin.</p>
                 </div>
             </div>
             <div class="row row-padded-mb">

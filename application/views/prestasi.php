@@ -23,7 +23,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Prestasi Siswa &amp; Sekolah</h2>
-					<p>Informasi Terkait Pencapaian Sekolah dan Siswa</p>
+					<p>Informasi Terkait Pencapaian Sekolah dan Siswa SMPN 24 Banjarmasin</p>
 				</div>
 			</div>
 			<div class="row row-padded-mb">

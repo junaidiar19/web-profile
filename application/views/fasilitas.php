@@ -21,7 +21,7 @@
     <div id="fh5co-fasilitas" class="fh5co-bg-section">
 		<div class="container">
         <div class="row text-center">
-            <h2><span>Data Fasilitas</span></h2>
+            <br><h2><span>Data Fasilitas</span></h2>
         </div>
         <div class="row">
             <div class="table-reponsive">
