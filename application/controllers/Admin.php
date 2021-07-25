@@ -46,6 +46,7 @@ class Admin extends CI_Controller {
         $config['upload_path']         = $path;
         $config['allowed_types']        = 'jpeg|jpg|png';
         $config['max_size']             = 2048;
+        $config['overwrite'] = TRUE;
 
         $this->load->library('upload', $config);
 
@@ -70,13 +71,13 @@ class Admin extends CI_Controller {
             'username' => $this->input->post('username'),
             'password' => $password,
             'image' => $filename,
-            'level' => $this->input->post('level'),
+            'level' => 1,
         ];
 
 
-       // echo "<pre>";
-       // var_dump($attr);
-        //exit();
+        // echo "<pre>";
+        // var_dump($attr);
+        // exit();
 
         $this->db->insert('users', $attr);
         $this->session->set_flashdata('success', 'Berhasil Menambahkan Data');
@@ -183,6 +184,7 @@ class Admin extends CI_Controller {
             'judul' => $this->input->post('judul'),
             'isi' => $this->input->post('isi'),
             'gambar' => $filename,
+            'status' => 'Baru'
         ];
        // echo "<pre>";
        // var_dump($attr);
@@ -664,6 +666,7 @@ class Admin extends CI_Controller {
         $config['upload_path']         = $path;
         $config['allowed_types']        = 'jpeg|jpg|png';
         $config['max_size']             = 2048;
+        $config['overwrite']             = true;
 
         $this->load->library('upload', $config);
 
@@ -872,6 +875,7 @@ class Admin extends CI_Controller {
         $data['active'] = 'komentar';
         $data['komentar'] = $this->model->komentarkegiatan();
         $data['komen'] = $this->model->komentargaleri();
+        $data['komentarAll'] = $this->db->get('komentar')->result();
 
         $this->load->view('layouts/app', $data);
     }

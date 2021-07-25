@@ -32,7 +32,7 @@
         <div class="card-header bg-white">
             <div class="row">
                 <div class="page-inner mt--5">
-                    <h4>Selamat datang <?php echo $this->auth->user()->name ?></h4> <br> <h6> Dihalaman Dashboard Admin Web Profile SMPN 24 Banjarmasin...</h6>
+                    <h4>Selamat datang <?php echo $this->auth->user()->name ?></h4> <h6> Di Halaman Dashboard Admin Web Profile SMPN 24 Banjarmasin...</h6>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
              <div class="col-md-12">
                     <a href="<?=base_url('admin/user')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'user') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-primary mb-3">
+                        <div class="card-body text-white bg-primary">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">ADMIN<br>
+                                        <h5><p class="card-category text-white text-white">ADMIN<br>
                                             <?=$user->num_rows()?></p></h5>
                                         
                                     </div>
@@ -67,7 +67,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/kegiatan')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'kegiatan') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-success mb-3">
+                        <div class="card-body text-white bg-success">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">BERITA<br><?=$kegiatan->num_rows()?></p>
+                                        <h5><p class="card-category text-white">BERITA<br><?=$kegiatan->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                  <div class="col-md-12">
                     <a href="<?=base_url('admin/jadwal')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'jadwal') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-dark mb-3">
+                        <div class="card-body text-white bg-dark">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">JADWAL<br><?=$jadwal->num_rows()?></p>
+                                        <h5><p class="card-category text-white">JADWAL<br><?=$jadwal->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/komentar')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'komentar') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-dark mb-3">
+                        <div class="card-body text-white bg-dark">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">KOMENTAR<br><?=$komentar->num_rows()?></p>
+                                        <h5><p class="card-category text-white">KOMENTAR<br><?=$komentar->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/staff')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'staff') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-warning mb-3">
+                        <div class="card-body text-white bg-warning">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">STAFF/GURU<br><?=$staff->num_rows()?></p>
+                                        <h5><p class="card-category text-white">STAFF/GURU<br><?=$staff->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/ekschool')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'ekstra') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-info mb-3">
+                        <div class="card-body text-white bg-info">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -164,7 +164,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category" style="font-size: 18px">EKSTRAKULIKULER<br><?=$ekstra->num_rows()?></p>
+                                        <h5><p class="card-category text-white" style="font-size: 18px">EKSTRAKULIKULER<br><?=$ekstra->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/kritik')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'kritik') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-warning mb-3">
+                        <div class="card-body text-white bg-warning">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">KRITIK & SARAN<br><?=$kritik->num_rows()?></p>
+                                        <h5><p class="card-category text-white">KRITIK & SARAN<br><?=$kritik->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -201,7 +201,7 @@
                  <div class="col-md-12">
                     <a href="<?=base_url('admin/galeri')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'galeri') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-danger mb-3">
+                        <div class="card-body text-white bg-danger">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -210,7 +210,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">GALERI<br><?=$galeri->num_rows()?></p>
+                                        <h5><p class="card-category text-white">GALERI<br><?=$galeri->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -222,7 +222,7 @@
                 <div class="col-md-12">
                     <a href="<?=base_url('admin/fasilitas')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'fasilitas') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-secondary mb-3">
+                        <div class="card-body text-white bg-secondary">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -231,7 +231,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">FASILITAS<br><?=$fasilitas->num_rows()?></p>
+                                        <h5><p class="card-category text-white">FASILITAS<br><?=$fasilitas->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>
@@ -243,7 +243,7 @@
                <div class="col-md-12">
                     <a href="<?=base_url('admin/prestasi')?>">
                     <div class="card card-stats card-round card-box <?=($active == 'prestasi') ? 'callout callout-success' : '' ?>">
-                        <div class="card-body text-white bg-secondary mb-3">
+                        <div class="card-body text-white bg-secondary">
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
@@ -252,7 +252,7 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers text-center">
-                                        <h5><p class="card-category">PRESTASI<br><?=$prestasi->num_rows()?></p>
+                                        <h5><p class="card-category text-white">PRESTASI<br><?=$prestasi->num_rows()?></p>
                                         </h5>
                                     </div>
                                 </div>

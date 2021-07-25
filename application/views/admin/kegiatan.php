@@ -50,8 +50,8 @@
                               <td><?=$d->isi?></td>
                               <td><?=$d->status?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash" onclick="delete_kegiatan(<?=$d->id?>)"></i></button>
-                                <button class="btn btn-success btn-sm"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#edit_<?=$d->id?>"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="delete_kegiatan(<?=$d->id?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit_<?=$d->id?>"><i class="fas fa-pencil-alt"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>

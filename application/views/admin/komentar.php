@@ -30,10 +30,10 @@
                 <table class="table table-striped dataTable">
                     <thead>
                         <tr>
-                          <th>No</th>
-                          <th>Id Pengunjung</th>
+                          <th width="10">No</th>
+                          <th>Email</th>
                           <th>Isi Komentar</th>
-                          <th width="200px">Judul Kegiatan</th>
+                          <th width="200px">Judul Berita</th>
                           <th>Status</th>
                           <th>Aksi</th>                                     
                         </tr>
@@ -42,13 +42,18 @@
                         <?php foreach ($komentar as $x => $d): ?>
                         <tr>
                             <td><?php echo $x+1 ?></td>
-                              <td><?=$d->id_user?></td>
-                              <td><?=$d->isi_komen?></td>
-                              <td><?=$d->judul?></td>
-                              <td><?=$d->status_komen?></td>
+                            <td><?=$d->email?></td>
+                            <td><?=$d->isi?></td>
+                            <td><?=$d->judul?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id_komen?>)"><i class="fas fa-trash"></i></button>
-                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#verif_<?=$d->id_komen?>"><i class="fas fa-eye"></i></button>
+                                <label class="switch">
+                                    <input type="checkbox" id="status-<?=$d->id?>" onclick="checkStatus(<?=$d->id?>)" <?=($d->status == 1) ? 'checked' : '' ?>>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#balas_<?=$d->id?>"><i class="fas fa-reply"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>
@@ -71,10 +76,10 @@
                 <table class="table table-striped dataTable">
                     <thead>
                         <tr>
-                          <th>No</th>
-                          <th>Id Pengunjung</th>
+                          <th width="10">No</th>
+                          <th>Email</th>
                           <th>Isi Komentar</th>
-                          <th>Caption Galeri</th>
+                          <th>Caption</th>
                           <th>Status</th>
                           <th>Aksi</th>                                     
                         </tr>
@@ -83,13 +88,18 @@
                         <?php foreach ($komen as $x => $d): ?>
                         <tr>
                             <td><?php echo $x+1 ?></td>
-                              <td><?=$d->id_user?></td>
-                              <td><?=$d->isi_komen?></td>
-                              <td><?=$d->caption?></td>
-                              <td><?=$d->status_komen?></td>
+                            <td><?=$d->email?></td>
+                            <td><?=$d->isi?></td>
+                            <td><?=$d->caption?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id_komen?>)"><i class="fas fa-trash"></i></button>
-                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#verifwe_<?=$d->id_komen?>"><i class="fas fa-eye"></i></button>
+                                <label class="switch">
+                                    <input type="checkbox" id="status-<?=$d->id?>" onclick="checkStatus(<?=$d->id?>)" <?=($d->status == 1) ? 'checked' : '' ?>>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="delete_komentar(<?=$d->id?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#balas_<?=$d->id?>"><i class="fas fa-reply"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>
@@ -100,56 +110,32 @@
     </div>
 </div>
 
-<?php foreach($komentar as $x => $d): ?>
-<div class="modal fade" id="verif_<?=$d->id_komen?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+<?php foreach($komentarAll as $x => $d): ?>
+<div class="modal fade" id="balas_<?=$d->id?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h6 class="modal-title">Verifikasi Komentar</h6>
+                <h6 class="modal-title">Balas Komentar</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('admin/komen_verif/' . $d->id_komen) ?>" method="post">
+            <form action="<?php echo base_url('komentar/balas/' . $d->id) ?>" method="post">
+            <input type="hidden" name="user_id" value="<?= $this->auth->user()->id ?>">
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Aktifkan Komentar</label>
-                    <select class="form-control mr-2" name="status">
-                    <option value="">-Pilih_</option>
-                    <option value="Aktif">Aktifkan</option>
-                    <option value="Hide">Sembuyikan</option>
-                </select>
+                    <label>Email</label>
+                    <input type="text" class="form-control" value="<?= $d->email ?>" readonly>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-        </div>
-    </div>
-</div>
-<?php endforeach ?>
-
-<?php foreach($komen as $x => $d): ?>
-<div class="modal fade" id="verifwe_<?=$d->id_komen?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title">Verifikasi Komentar</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="<?php echo base_url('admin/komen_verif/' . $d->id_komen) ?>" method="post"s>
-            <div class="modal-body">
+                <p class="mb-0">Komentar:</p>
+                <p><?=$d->isi?></p>
                 <div class="form-group">
-                    <label>Aktifkan Komentar</label>
-                    <select class="form-control mr-2" name="status">
-                    <option value="">-Pilih_</option>
-                    <option value="Aktif">Aktifkan</option>
-                    <option value="Hide">Sembuyikan</option>
-                </select>
+                    <label>Nama</label>
+                    <input type="text" class="form-control" value="<?= $this->auth->user()->name ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Balasan</label>
+                    <textarea name="balas" class="form-control" cols="30" rows="4"><?=$d->balas?></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -169,14 +155,32 @@ function delete_komentar(id) {
     if(check) {
         $.ajax({
             type: 'post',
-            url : '<?=base_url('admin/delete_komentar')?>',
+            url : '<?=base_url('komentar/delete')?>',
             data : {id:id},
             success: function(res) {
-                    location.reload();
+                location.reload();
             }, error: function(err) {
                 console.log(err);
             }
         })
     }
+}
+
+function checkStatus(id) {
+    var check = $("#status-"+id);
+    var val   = check.is(":checked") ? '1' : null;
+
+    $.ajax({
+        type: 'post',
+        url: "<?= base_url('komentar/update_status') ?>",
+        data : {
+            "id" : id,
+            "val" : val,
+        }, success: function(data) {
+            console.log(data)
+        }, error: function(err) {
+            console.log(err);
+        }
+    });
 }
 </script>

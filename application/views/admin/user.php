@@ -99,10 +99,6 @@
                     <label>Upload Foto</label>
                     <input type="file" class="form-control" name="image">
                 </div>
-                <div class="form-group">
-                    <label>Level</label>
-                    <input type="text" class="form-control" name="level">
-                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

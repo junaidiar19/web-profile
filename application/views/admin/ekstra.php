@@ -54,8 +54,8 @@
                               <td><?=$d->hari?></td>
                               <td><?=$d->jam?></td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times" onclick="delete_ekstra(<?=$d->id?>)"></i></button>
-                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#edit_<?=$d->id?>"></i></button>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="delete_ekstra(<?=$d->id?>)"><i class="fas fa-times"></i></button>
+                                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit_<?=$d->id?>"><i class="fas fa-pencil-alt"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>

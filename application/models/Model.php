@@ -18,7 +18,6 @@ class Model extends CI_Model{
     	return $this->db->where('id', $id)->delete($table);
     }
 
-
     function delete_komen($table, $id) {
         return $this->db->where('id_komen', $id)->delete($table);
     }
@@ -35,6 +34,16 @@ class Model extends CI_Model{
 
     function komentar_komen($id) {
         return $this->db->query("SELECT * FROM komentar WHERE id_galeri = '".$id."' AND status_komen='Aktif' ");
+    }
+
+    public function get_balasan($id)
+    {
+        return $this->db->where('komentar.id', $id)
+                    ->join('users', 'user_id = users.id')
+                    ->select('komentar.*, users.name, users.image')
+                    ->where('balas !=', null)
+                    ->get('komentar')
+                    ->row();
     }
 
     function kegiatanduatabel() {
@@ -83,19 +92,21 @@ class Model extends CI_Model{
     }
 
     function komentarkegiatan() {
-        $this->db->select('*');
+        $this->db->select('komentar.*, kegiatan.judul');
         $this->db->from('komentar');
-        $this->db->join('kegiatan','kegiatan.id=komentar.id_kegiatan');
-        $this->db->order_by('komentar.id_komen desc');
+        $this->db->join('kegiatan','kegiatan.id=komentar.foreign_id');
+        $this->db->order_by('komentar.id desc');
+        $this->db->where('jenis', 'berita');
         $query = $this->db->get();
         return $query->result();
     }
 
     function komentargaleri() {
-        $this->db->select('*');
+        $this->db->select('komentar.*, galeri.caption');
         $this->db->from('komentar');
-        $this->db->join('galeri','galeri.id=komentar.id_galeri');
-        $this->db->order_by('komentar.id_komen desc');
+        $this->db->join('galeri','galeri.id=komentar.foreign_id');
+        $this->db->order_by('komentar.id desc');
+        $this->db->where('jenis', 'galeri');
         $query = $this->db->get();
         return $query->result();
     }

@@ -1,3 +1,13 @@
+	<style>
+		@media (min-width: 765px) {
+			.card-img-fit {
+				width: 100%;
+				height: 14vw;
+				object-fit: cover;
+			}
+		}
+	</style>
+	
 	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
@@ -19,64 +29,47 @@
 	</aside>
 	
     <div id="fh5co-gallery" class="fh5co-bg-section">
-        <div class="row text-center">
-            <h2><span>Gallery Photo</span></h2>
-        </div>
-        <div class="row">
-        	 <?php foreach ($galeri->result() as $x => $d): ?>
-            <div class="col-md-3 col-padded text-center">
-             <button data-toggle="modal" data-target="#komen_<?=$d->id?>"><img src="<?= base_url($d->image) ?>"  height="200px" weight="200px"></button><br><?=$d->caption?>
-            </div>
-                        <?php endforeach ?>
-        </div>
+		<div class="container">
+			<div class="row text-center">
+				<h2><span>Gallery Photo</span></h2>
+			</div>
+			<?= alert(); ?>
+			<div class="row" style="margin-bottom: 40px;">
+				<?php foreach ($galeri->result() as $x => $d): ?>
+				<div class="col-md-3 col-padded text-center">
+					<a href="#!" data-toggle="modal" data-target="#komen_<?=$d->id?>">
+						<img src="<?= base_url($d->image) ?>" class="img-thumbnail card-img-fit">
+					</a>
+					<br>
+					<?=$d->caption?>
+				</div>
+				<?php endforeach ?>
+			</div>
+		</div>
     </div>
 
-<?php foreach ($galeri->result() as $x => $d): ?>
+<?php foreach ($galeri->result() as $x => $d): 
+	$komen = $this->db->where('foreign_id', $d->id)->where('jenis', 'galeri')->where('status', 1)->get('komentar');
+?>
 <div class="modal fade" id="komen_<?=$d->id?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Detail</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="container">
-                <center><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"> <img src="<?= base_url($d->image) ?>"  height="200px" weight="200px"></a>
-            	</center><p><?= ($d->caption) ?></p><br>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header border-0">
+				<h5 class="modal-title">Detail</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="padding-top: 0;">
+				<div class="text-center">
+					<img src="<?= base_url($d->image) ?>" class="img-thumbnail card-img-fit">
+					<p><?=$d->caption?></p>
+				</div>
 
-            	<a href="<?php echo base_url('Galeri/detail/'.$d->id); ?>">Lihat Komentar</a>
-            	
-            <br><br>
-					<h3>Sampaikan Komentar Anda</h3>
-					<form action="<?php echo base_url('galeri/tambah_komentar') ?>" method="post">
-						<div class="row form-group">						
-							<div class="col-md-6">
-						<select class="form-control" name="id">		
-								<option value="<?= $d->id ?>"><?= $d->caption ?></option>
-						</select></div>
-					</div>
-						<div class="row form-group">
-							<div class="col-md-6">
-								<!-- <label for="email">Email</label> -->
-								<input type="email" name="email" id="email" class="form-control" placeholder="Email Anda">
-							</div>
-						</div>
- 
-						<div class="row form-group">
-							<div class="col-md-6">
-								<!-- <label for="message">Message</label> -->
-								<textarea name="komentar" id="message" cols="30" rows="10" class="form-control" placeholder="Masukkan Komentar Anda"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Kirim Komentar" class="btn btn-primary">
-						</div>
-
-					</form>	
-					</div>
-					</div>
-        </div>
-    </div>
+				<?php $this->load->view('user/komentar', ['jenis_komentar' => 'galeri', 'komen' => $komen, 'd' => $d]); ?>
+			</div>
+		</div>
+	</div>
 </div>
+	
 <?php endforeach ?>

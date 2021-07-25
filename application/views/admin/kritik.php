@@ -45,7 +45,7 @@
                               <td><?=$d->kritik?></td>
                               <td><?=$d->saran?></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-times" onclick="delete_kritik(<?=$d->id?>)"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="delete_kritik(<?=$d->id?>)"><i class="fas fa-times"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>

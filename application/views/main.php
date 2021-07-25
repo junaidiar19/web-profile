@@ -70,6 +70,16 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .border-0 {
+            border: unset;
+        }
+    </style>
     </head>
     <body>
         

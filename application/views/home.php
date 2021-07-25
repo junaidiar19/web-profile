@@ -60,7 +60,7 @@
     </div>
 
 
-    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/project-7.JPG);" data-stellar-background-ratio="0.5">
+    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url(<?= base_url('assets/images/backg.jpg') ?>);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
