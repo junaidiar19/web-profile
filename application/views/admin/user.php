@@ -52,8 +52,8 @@
                               <td><?=$d->username?></td>
                               <td><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"><img src="<?= base_url($d->image) ?>" height="50px" weight="50px"></a></td>
                             <td>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash" onclick="delete_user(<?=$d->id?>)"></i></button>
-                                <button class="btn btn-success btn-sm"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#edit_<?=$d->id?>"></i></button>
+                                <button class="btn btn-danger btn-sm" onclick="delete_user(<?=$d->id?>)"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit_<?=$d->id?>"><i class="fas fa-pencil-alt"></i></button>
                             </td>
                         </tr>
                         <?php endforeach ?>

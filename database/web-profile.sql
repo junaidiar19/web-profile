@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2021 at 03:27 PM
+-- Generation Time: Jul 25, 2021 at 03:29 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.14
 
@@ -124,20 +124,22 @@ CREATE TABLE `kegiatan` (
   `gambar` varchar(254) NOT NULL,
   `isi` text NOT NULL,
   `id_komentar` int(11) NOT NULL,
-  `status` varchar(200) NOT NULL
+  `status` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kegiatan`
 --
 
-INSERT INTO `kegiatan` (`id`, `judul`, `gambar`, `isi`, `id_komentar`, `status`) VALUES
-(1, 'Peringatan Sumpah Pemuda', 'assets/images/kegiatan/upacra.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat.', 0, 'Lama'),
-(2, 'PPDB Jalur Prestasi pada SMPN 24 Banjarmasin', 'assets/images/kegiatan/ppdb1.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat.', 0, 'Lama'),
-(3, 'Ujian Daring TA. 2020/2021', 'assets/images/kegiatan/ujian_daring.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Lama'),
-(4, 'Vaksinisasi Tenaga Pengajar dan Staff SMPN 24 Banjarmasin', 'assets/images/kegiatan/vaksinasi.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru'),
-(5, 'MPLS Siswa Baru SMPN 24 Banjarmasin TA. 2021/2022', 'assets/images/kegiatan/mpls.JPG', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru'),
-(6, 'Perpisahan dan Pembagian Kelas IX SKHUS SMPN 24', 'assets/images/kegiatan/perpisahan2.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru');
+INSERT INTO `kegiatan` (`id`, `judul`, `gambar`, `isi`, `id_komentar`, `status`, `created_at`) VALUES
+(1, 'Peringatan Sumpah Pemuda', 'assets/images/kegiatan/upacra.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat.', 0, 'Lama', '2021-07-25 07:10:07'),
+(2, 'PPDB Jalur Prestasi pada SMPN 24 Banjarmasin', 'assets/images/kegiatan/ppdb1.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat.', 0, 'Lama', '2021-07-25 07:10:07'),
+(3, 'Ujian Daring TA. 2020/2021', 'assets/images/kegiatan/ujian_daring.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Lama', '2021-07-25 07:10:07'),
+(4, 'Vaksinisasi Tenaga Pengajar dan Staff SMPN 24 Banjarmasin', 'assets/images/kegiatan/vaksinasi.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru', '2021-07-25 07:10:07'),
+(5, 'MPLS Siswa Baru SMPN 24 Banjarmasin TA. 2021/2022', 'assets/images/kegiatan/mpls.JPG', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru', '2021-07-25 07:10:07'),
+(6, 'Perpisahan dan Pembagian Kelas IX SKHUS SMPN 24', 'assets/images/kegiatan/perpisahan2.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.\r\nVivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.\r\nIn porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.\r\nFusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.\r\nDonec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue.', 0, 'Baru', '2021-07-25 07:10:07'),
+(8, 'Berita Baru', 'assets/images/kegiatan/default1.png', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend.', 0, 'Baru', '2021-07-25 07:11:50');
 
 -- --------------------------------------------------------
 
@@ -147,21 +149,52 @@ INSERT INTO `kegiatan` (`id`, `judul`, `gambar`, `isi`, `id_komentar`, `status`)
 
 CREATE TABLE `komentar` (
   `id` int(11) NOT NULL,
-  `id_user` varchar(254) NOT NULL,
-  `id_kegiatan` int(11) NOT NULL,
-  `id_galeri` int(11) NOT NULL,
-  `isi_komen` text NOT NULL,
-  `status_komen` varchar(200) NOT NULL
+  `email` varchar(200) NOT NULL,
+  `isi` text NOT NULL,
+  `status` tinyint(4) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `balas` text DEFAULT NULL,
+  `jenis` varchar(40) DEFAULT NULL,
+  `foreign_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `komentar`
 --
 
-INSERT INTO `komentar` (`id`, `id_user`, `id_kegiatan`, `id_galeri`, `isi_komen`, `status_komen`) VALUES
-(3, 'abdul@gmail.com', 1, 0, 'Mantap', 'Hide'),
-(4, 'abdul@gmail.com', 0, 1, 'Mantap', 'Hide'),
-(5, 'abdul@gmail.com', 0, 2, 'Mantap', 'Hide');
+INSERT INTO `komentar` (`id`, `email`, `isi`, `status`, `user_id`, `balas`, `jenis`, `foreign_id`, `created_at`, `updated_at`) VALUES
+(3, 'andika@gmail.com', 'bagus banget', 1, 3, 'Terima Kasih', 'berita', 6, '2021-07-25 08:22:44', '2021-07-25 08:22:44'),
+(6, 'andi@gmail.com', 'bagus banget', NULL, NULL, NULL, 'galeri', 1, '2021-07-25 09:04:16', '2021-07-25 09:04:16'),
+(7, 'andika@gmail.com', 'bagus', 1, 3, 'terima kasih', 'berita', 5, '2021-07-25 09:05:19', '2021-07-25 09:05:19'),
+(8, 'andika@gmail.com', 'keren', 1, 3, 'terimakasih', 'galeri', 2, '2021-07-25 09:06:12', '2021-07-25 09:06:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `komentar_`
+--
+
+CREATE TABLE `komentar_` (
+  `id_komen` int(11) NOT NULL,
+  `id_user` varchar(254) NOT NULL,
+  `id_kegiatan` int(11) NOT NULL,
+  `id_galeri` int(11) NOT NULL,
+  `isi_komen` text NOT NULL,
+  `status_komen` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `komentar_`
+--
+
+INSERT INTO `komentar_` (`id_komen`, `id_user`, `id_kegiatan`, `id_galeri`, `isi_komen`, `status_komen`, `created_at`) VALUES
+(3, 'abdul@gmail.com', 1, 0, 'Mantap', 'Hide', '2021-07-25 07:51:20'),
+(4, 'abdul@gmail.com', 0, 1, 'Mantap', 'Hide', '2021-07-25 07:51:20'),
+(5, 'abdul@gmail.com', 0, 2, 'Mantap', 'Hide', '2021-07-25 07:51:20'),
+(6, 'ibnu@gmail.com', 6, 0, 'keren banget', 'Aktif', '2021-07-25 07:51:20');
 
 -- --------------------------------------------------------
 
@@ -261,7 +294,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `nip`, `email`, `username`, `password`, `image`, `level`) VALUES
 (1, 'Ika', 6112001, 'ika@gmail.com', 'admin', 'admin', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_29.jpeg', 1),
 (2, 'Irfan Arisandi', 0, 'Teknik Informatika', 'irfan', '$2y$12$6Esi83o3EiU/mj3VWFJKEe0eeROkF8N73bjyppTkFhLZPlTGA76aG', '', 2),
-(3, 'Ali', 7112000, 'ali@gmail.com', 'admin2', '$2a$08$fz3rCgzgOsDx4TxnYd5XGupJngp5XdYbi5QSwf0vCFePplmGqFYtS', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_11.jpeg', 1);
+(3, 'Ali', 7112000, 'ali@gmail.com', 'admin2', '$2a$08$fz3rCgzgOsDx4TxnYd5XGupJngp5XdYbi5QSwf0vCFePplmGqFYtS', 'assets/images/WhatsApp_Image_2021-07-01_at_00_55_11.jpeg', 1),
+(4, 'Irfan', 826253, 'irfan@gmail.com', 'irfan', '$2a$08$pxTFqs5HhBWMvlyjybHi8.PFuGGZVJLoILDTpLjVuhmAoEwjozo1.', 'assets/images/avatar.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -304,6 +338,12 @@ ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `komentar_`
+--
+ALTER TABLE `komentar_`
+  ADD PRIMARY KEY (`id_komen`);
+
+--
 -- Indexes for table `kriitik`
 --
 ALTER TABLE `kriitik`
@@ -335,7 +375,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ekstrakulikuler`
 --
 ALTER TABLE `ekstrakulikuler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `fasilitas`
@@ -359,13 +399,19 @@ ALTER TABLE `jadwal`
 -- AUTO_INCREMENT for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `komentar_`
+--
+ALTER TABLE `komentar_`
+  MODIFY `id_komen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kriitik`
@@ -389,7 +435,7 @@ ALTER TABLE `prestasi`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
