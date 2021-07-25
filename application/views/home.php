@@ -6,7 +6,7 @@
     <aside id="fh5co-hero">
         <div class="flexslider">
             <ul class="slides">                
-            <li style="background-image: url(assets/images/smp.JPG);">
+            <li style="background-image: url(<?=base_url('assets/images/smp.jpg')?>)">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(assets/images/smp-1.JPG);">
+            <li style="background-image: url(<?=base_url('assets/images/smp-1.jpg')?>);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
