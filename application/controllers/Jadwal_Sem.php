@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Jadwal_Sem extends CI_Controller {
+class Jadwal_sem extends CI_Controller {
 
 	function get_kelas($id=null){
 
