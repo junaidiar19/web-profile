@@ -147,27 +147,27 @@
                 <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
                     <h3>Aktivitas Sekolah</h3>
                     <ul class="fh5co-footer-links">
-                        <li><a href="jadwal">Jadwal</a></li>
-                        <li><a href="ekscool">Ekstrakulikuler</a></li>
-                        <li><a href="prestasi">Prestasi</a></li>
-                        <li><a href="galeri">Galeri</a></li>
+                        <li><a href="<?= base_url('jadwal') ?>">Jadwal</a></li>
+                        <li><a href="<?= base_url('ekstra') ?>">Ekstrakulikuler</a></li>
+                        <li><a href="<?= base_url('prestasi') ?>">Prestasi</a></li>
+                        <li><a href="<?= base_url('galeri') ?>">Galeri</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
                     <h3>Info Sekolah</h3>
                     <ul class="fh5co-footer-links">
-                        <li><a href="home">Home</a></li>
-                        <li><a href="profil">Profil</a></li>
-                        <li><a href="berita">Berita</a></li>
-                        <li><a href="kontak">Kontak</a></li>
-                        <li><a href="kritik">Kritik Saran</a></li>
+                        <li><a href="<?= base_url('home') ?>">Home</a></li>
+                        <li><a href="<?= base_url('profil') ?>">Profil</a></li>
+                        <li><a href="<?= base_url('kegiatan') ?>">Berita</a></li>
+                        <li><a href="<?= base_url('kontak') ?>">Kontak</a></li>
+                        <li><a href="<?= base_url('kritik') ?>">Kritik Saran</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 fh5co-widget">
                     <h3>Kunjungi Kami</h3>
                     <ul class="fh5co-footer-links">
-                        <li><a href="#">Website</a></li>
+                        <li><a href="<?= base_url('home') ?>">Website</a></li>
                     </ul>
                 </div>
             </div>
@@ -175,8 +175,8 @@
             <div class="row copyright">
                 <div class="col-md-12 text-center">
                     <p>
-                        <small class="block">Copyright &copy; 2021 <a href="#">SMPN 24 BANJARMASIN</a>. All rights reserved.</small> 
-                        <small class="block">CREATE by <a href="$" target="_blank">Siti Zulaika</a></small>
+                        <small class="block">Copyright &copy; 2021 <a href="#!">SMPN 24 BANJARMASIN</a>. All rights reserved.</small> 
+                        <small class="block">CREATE by <a href="#!" target="_blank">Siti Zulaika</a></small>
                     </p>
                 </div>
             </div>
