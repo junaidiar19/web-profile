@@ -88,14 +88,10 @@
     <div id="page">
     <nav class="fh5co-nav" role="navigation" >
         <div class="top-menu">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-2">
-                        <div id="fh5co-logo"> 
-                                <center>
-                                    <a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="img-fluid" style="height: 50px;" alt=""></a>
-                                </center>
-                            </div>
+                        <a href="home"><img src="<?=base_url('assets/lambang.png')?>" class="img-fluid" style="height: 40px; margin-left: 10px;" alt=""></a>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul> 
@@ -113,8 +109,8 @@
                             <li class="has-dropdown <?php echo $content=='jadwal'? 'active' : ''?>"><a href="#">JADWAL PELAJARAN</a>
                                 <ul class="dropdown">                     
                                     <li><a href="<?php echo base_url('jadwal') ?>">KELAS VII</a></li>
-                                    <li><a href="<?php echo base_url('jadwal_Del') ?>">KELAS VIII</a></li>
-                                    <li><a href="<?php echo base_url('jadwal_Sem') ?>">KELAS IX</a></li>
+                                    <li><a href="<?php echo base_url('jadwal_del') ?>">KELAS VIII</a></li>
+                                    <li><a href="<?php echo base_url('jadwal_sem') ?>">KELAS IX</a></li>
                                 </ul></li>
                             <li class="<?php echo $content=='ekscool'? 'active' : ''?>"><a href="<?php echo base_url('ekstra') ?>">EKSTRAKULIKULER</a></li>
                             <li class="<?php echo $content=='prestasi'? 'active' : ''?>"><a href="<?php echo base_url('prestasi') ?>">PRESTASI</a></li>
