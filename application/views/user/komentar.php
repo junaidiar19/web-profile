@@ -1,4 +1,4 @@
-<div class="fh5co-contact-info" style="padding-top: 0px; display: block">
+<div class="fh5co-contact-info" style="padding-top: 0px; display: none">
     <h4>Komentar</h4>
 
     <?php if($komen->num_rows() > 0): ?>
@@ -42,7 +42,7 @@
     <div><br><br>
     <?= alert(); ?>
     <h4>Sampaikan Komentar Anda</h4>
-    <form action="<?php echo base_url('komentar/store/' . $jenis_komentar) ?>" method="post" style="display: block;">
+    <form action="<?php echo base_url('komentar/store/' . $jenis_komentar) ?>" method="post" style="display: none;">
 
     <div class="row form-group">						
         <div class="col-md-12">
