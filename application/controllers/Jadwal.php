@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Jadwal extends CI_Controller {
 
 	function get_kelas($id=null){
-
+		
 	}
 
 	public function index()
