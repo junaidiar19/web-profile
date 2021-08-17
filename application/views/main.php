@@ -82,7 +82,6 @@
     </style>
     </head>
     <body>
-    <script id="dsq-count-scr" src="//zulaika-polhas-xyz.disqus.com/count.js" async></script>
     <div id="page">
     <nav class="fh5co-nav" role="navigation" >
         <div class="top">
@@ -230,6 +229,7 @@
         enableUtc: false
     });
     </script>
+    <script id="dsq-count-scr" src="//zulaika-polhas-xyz.disqus.com/count.js" async></script>
     </body>
 </html>
 
