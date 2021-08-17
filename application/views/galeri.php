@@ -64,9 +64,9 @@
 				<div class="text-center">
 					<img src="<?= base_url($d->image) ?>" class="img-thumbnail card-img-fit">
 					<p><?=$d->caption?></p>
+					<a href="<?php echo base_url('Galeri/detail/'.$d->id); ?>">Lihat Komentar</a>
 				</div>
 
-				<?php $this->load->view('user/komentar', ['jenis_komentar' => 'galeri', 'komen' => $komen, 'd' => $d]); ?>
 			</div>
 		</div>
 	</div>

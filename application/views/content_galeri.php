@@ -1,4 +1,27 @@
-	<aside id="fh5co-hero">
+	
+	<div id="fh5co-blog">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span><a data-fancybox="gallery" href="<?= base_url($d->image) ?>"><img src="<?= base_url($d->image) ?>" style="height: 300px; margin-bottom: 20px; weight:300px"></a></span>
+					<p class="text-center"><?= $d->caption ?></p>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<?php $this->load->view('user/komentar', ['jenis_komentar' => 'berita']); ?>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+<!--	<aside id="fh5co-hero">
 		<div class="flexslider">
 			<ul class="slides">
 		   	<li style="background-image: url(<?=base_url('assets/images/smp_24.jpeg')?>);">

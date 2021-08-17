@@ -7,7 +7,7 @@ class Galeri extends CI_Controller {
         parent::__construct();
         $this->load->model(['model']);
     }
-
+ 
 	public function index()
 	{
 		$this->data['content'] = "galeri";
@@ -31,9 +31,10 @@ class Galeri extends CI_Controller {
 	public function detail($id)
 	{
 		$this->data['content'] = "content_galeri";
-        $this->data['galeri'] = $this->db->query("SELECT * FROM galeri WHERE id ='".$id."'");
-        $this->data['komen'] = $this->db->query("SELECT * FROM komentar WHERE id_galeri = '".$id."' AND status_komen='Aktif' ");
+		$this->data['page'] = "berita";
 
+        $this->data['d'] = $this->db->get_where('galeri', ['id' => $id])->row();
+        $this->data['komen'] = $this->db->where('foreign_id', $id)->where('jenis', 'galeri')->where('status', 1)->get('komentar');
 
 		$this->load->view('main', $this->data);
 	}
