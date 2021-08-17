@@ -211,7 +211,7 @@
     <!-- Count Down -->
     <script src="<?php echo base_url('assets/') ?>js/simplyCountdown.js"></script>
     <!-- Main -->
-    <script src="<?php echo base_url('assets/') ?>js/main.js"></script>
+    <script src="<?php echo base_url('assets/') ?>js/main.js?v=" . time()></script>
     <script>
     var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
