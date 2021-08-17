@@ -1,4 +1,4 @@
-<div class="fh5co-contact-info" style="padding-top: 0px;">
+<div class="fh5co-contact-info" style="padding-top: 0px; display: block">
     <h4>Komentar</h4>
 
     <?php if($komen->num_rows() > 0): ?>
@@ -42,7 +42,7 @@
     <div><br><br>
     <?= alert(); ?>
     <h4>Sampaikan Komentar Anda</h4>
-    <form action="<?php echo base_url('komentar/store/' . $jenis_komentar) ?>" method="post">
+    <form action="<?php echo base_url('komentar/store/' . $jenis_komentar) ?>" method="post" style="display: block;">
 
     <div class="row form-group">						
         <div class="col-md-12">
@@ -67,3 +67,23 @@
 
     </form>	
 </div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zulaika-polhas-xyz.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
