@@ -187,7 +187,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           
            <li class="nav-item">
-            <a href="<?php echo base_url('admin/komentar') ?>" class="nav-link <?= ($active == 'komentar') ? 'active' : '' ?>">
+            <a href="<?php echo base_url('admin/komentar') ?>" class="nav-link d-none <?= ($active == 'komentar') ? 'active' : '' ?>">
               <i class="nav-icon fas fa-comments"></i>
               <p>Komentar</p>
             </a>

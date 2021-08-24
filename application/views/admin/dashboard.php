@@ -107,7 +107,7 @@
                     </a>
                 </div>
                 <div class="col-md-12">
-                    <a href="<?=base_url('admin/komentar')?>">
+                    <a href="<?=base_url('admin/komentar')?>" class="nav-link d-none">
                     <div class="card card-stats card-round card-box <?=($active == 'komentar') ? 'callout callout-success' : '' ?>">
                         <div class="card-body text-white bg-dark">
                             <div class="row">
